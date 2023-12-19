@@ -30,5 +30,12 @@ namespace BTL
             frmdn.Show();
             this.Hide();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            login frmdn = new login();
+            frmdn.Show();
+            this.Hide();
+        }
     }
 }

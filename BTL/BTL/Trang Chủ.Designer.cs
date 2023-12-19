@@ -38,9 +38,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(145, 205);
+            this.button1.Location = new System.Drawing.Point(193, 252);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(324, 68);
+            this.button1.Size = new System.Drawing.Size(432, 84);
             this.button1.TabIndex = 0;
             this.button1.Text = "Quản Lý Sách";
             this.button1.UseVisualStyleBackColor = false;
@@ -50,9 +51,10 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(145, 96);
+            this.button2.Location = new System.Drawing.Point(193, 118);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(324, 68);
+            this.button2.Size = new System.Drawing.Size(432, 84);
             this.button2.TabIndex = 1;
             this.button2.Text = "Quản Lý Nhân Viên";
             this.button2.UseVisualStyleBackColor = false;
@@ -63,23 +65,26 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit.Location = new System.Drawing.Point(23, 27);
+            this.btnExit.Location = new System.Drawing.Point(31, 33);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(104, 42);
+            this.btnExit.Size = new System.Drawing.Size(139, 52);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Trở lại";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Trang_Chủ
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BTL.Properties.Resources._9756_jpg_wh860;
-            this.ClientSize = new System.Drawing.Size(644, 410);
+            this.ClientSize = new System.Drawing.Size(859, 505);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Trang_Chủ";
             this.Text = "Trang_Chủ";
             this.ResumeLayout(false);

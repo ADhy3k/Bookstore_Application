@@ -33,5 +33,62 @@ namespace BTL
             frmdn.Show();
             this.Hide();
         }
+
+        private void txtMaNv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Mã Nhân Viên : " + txtMaNv.Text + System.Environment.NewLine + System.Environment.NewLine + "Họ tên nhân viên : " + txtTenNv.Text + System.Environment.NewLine + System.Environment.NewLine + "Ngày Sinh : " + dtpNgaysinh.Value + System.Environment.NewLine + System.Environment.NewLine + " Địa chỉ : " + txtDiachi.Text + System.Environment.NewLine + System.Environment.NewLine + " Lương nhân viên : " + txtLuong.Text + System.Environment.NewLine + System.Environment.NewLine + " Ca Trực : " + values  + System.Environment.NewLine + System.Environment.NewLine, "Xuất Bill Thành Công", MessageBoxButtons.OK);
+        }
+
+        private void txtTenNv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpNgaysinh_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDiachi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLuong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton1.Checked = true;
+            values = "sáng";
+
+        }
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton2.Checked = true;
+            values = "Trưa";
+        }
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton3.Checked = true;
+            values = "Tối";
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        string values;
+        private void Quản_Lý_Nhân_Viên_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

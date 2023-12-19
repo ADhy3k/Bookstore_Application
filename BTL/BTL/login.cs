@@ -15,6 +15,7 @@ namespace BTL
 {
     public partial class login : Form
     {
+        user cn = new user();
         public login()
         {
             InitializeComponent();
@@ -22,40 +23,36 @@ namespace BTL
         user ub = new user();
         private void button1_Click(object sender, EventArgs e)
         {
-            String condition;
-            condition = " username ='" + textBox1.Text + "' AND password ='" + textBox2.Text + "'";
-            DataTable dt = new DataTable();
-            try
+            String a = "Select * from DANGNHAP";
+            DataTable db = ub.getUser(a); ;
+            if(db.Rows.Count==0)
             {
-                dt = ub.getUser(condition);
-                if (dt.Rows.Count > 0)
+                MessageBox.Show("sai");
+            }
+            bool isMatchFound = false;
+            foreach (DataRow it in db.Rows)
+            {
+                string us = it["username"].ToString();
+                string pw = it["password"].ToString();
+                
+                if (us == textBox1.Text && pw == textBox2.Text)
                 {
-                    MessageBox.Show("Đăng nhập thành công !");
-                    Trang_Chủ frmmhc = new Trang_Chủ();
-                    frmmhc.FormClosed += new FormClosedEventHandler(frmmhc_Closed);
-                    frmmhc.Show();
+                    MessageBox.Show(" Đăng nhập Thành Công ");
+                    Trang_Chủ dia = new Trang_Chủ();
+                    dia.Show();
                     this.Hide();
                 }
-                else
-                {
-                    MessageBox.Show("Bạn chưa có tài khoản, hãy đăng ký !");
-                    Đăng_Ký frmdk = new Đăng_Ký();
-                    frmdk.FormClosed += new FormClosedEventHandler(frmdangky_Closed);
-                    frmdk.Show();
-                    this.Hide();
-                }
+
+
             }
-            catch (FormatException)
+            if (!isMatchFound)
             {
-                MessageBox.Show("Bạn đã nhập sai cú pháp");
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Lỗi kết nối CSDL !");
+                MessageBox.Show(" Thông tin chưa chính xác");
+                textBox1.Focus();
             }
         }
 
-        private void frmmhc_Closed(object sender, FormClosedEventArgs e)
+            private void frmmhc_Closed(object sender, FormClosedEventArgs e)
         {
             this.Show();
         }
@@ -93,6 +90,11 @@ namespace BTL
             Quên_Mật_Khẩu frmdn = new Quên_Mật_Khẩu();
             frmdn.Show();
             this.Hide();
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
