@@ -10,19 +10,19 @@ using System.Data;
 
 namespace BTL.BUS
 {
-    public class nhanVien
+    public class sach
     {
         CNT dt = new CNT();
-        public DataTable getNhanvien()
+        public DataTable getSach()
         {
             DataTable da = null;
-            String sql = "Select * from NHANVIEN ";
+            String sql = "Select * from SACH ";
             da = dt.getTable(sql);
             return da;
         }
-        public void insertNV(String manv, String tennv, String ngaysinh, String diachi, int luong, String ca, String sdt)
+        public void insertS(String masach, String tensach, String ngayxb, String theloai, String tacgia, int gia, String so)
         {
-            String sql = " insert into NHANVIEN values('" + manv + "',N'" + tennv + "',N'" + ngaysinh + "',N'" + diachi + "',N'" + luong + "',N'" + ca + "',N'"+ sdt +"')";
+            String sql = " insert into SACH values('" + masach + "',N'" + tensach + "',N'" + ngayxb + "',N'" + theloai + "',N'" + tacgia + "',N'" + gia + "', N'" + so + "')";
             try
             {
                 dt.ExcuteNonQuery(sql);
@@ -34,9 +34,9 @@ namespace BTL.BUS
                 MessageBox.Show(ex.Message);
             }
         }
-        public void updateNV(String manv, String tennv, String ngaysinh, String diachi, int luong, String ca, String sdt)
+        public void updateSach(String masach, String tensach, String ngayxb, String theloai, String tacgia, int gia, String so)
         {
-            String sql = "UPDATE NHANVIEN set tenNV=N'" + tennv + "',ngaysinh='" + ngaysinh + "',diachi=N'" + diachi + "',luong='" + luong + "',ca='" + ca + "', sdt='" + sdt + "' where maNV='" + manv + "'";
+            String sql = "UPDATE SACH set maSach=N'" + masach + "',tenSach=N'" + tensach + "',manph=N'" + ngayxb + "',theLoai=N'" + theloai + "',tacGia=N'" + tacgia + "', giaTien='" + gia + "', so='" + so + "' where maSach='" + masach + "'";
             try
             {
                 dt.ExcuteNonQuery(sql);
@@ -48,13 +48,13 @@ namespace BTL.BUS
                 MessageBox.Show(ex.Message);
             }
         }
-        public void deleteNV(String manv)
+        public void deleteSach(String masach)
         {
-            String sql = "delete NHANVIEN where maNV='" + manv + "'";
+            String sql = "delete SACH where maSach='" + masach + "'";
             try
             {
                 dt.ExcuteNonQuery(sql);
-                MessageBox.Show("Đá đuýt thành công !");
+                MessageBox.Show("Xóa thành công !");
             }
             catch (SqlException ex)
             {
@@ -65,7 +65,7 @@ namespace BTL.BUS
         public DataTable Search(String condi)
         {
             DataTable da = null;
-            String sql = "Select * from NhanVien where maNV like N'%" + condi + "%' OR tenNV like N'%" + condi + "%'";
+            String sql = "Select * from SACH where maSach like N'%" + condi + "%' OR theLoai like N'%" + condi + "%'";
             da = dt.getTable(sql);
             return da;
         }

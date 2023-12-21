@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
-using System.Net.Mail;
-using BTL.BUS;
+using System.Data.Sql;
+using System.Data.SqlClient;
 using BTL.connect;
 
 namespace BTL
@@ -20,23 +19,29 @@ namespace BTL
         {
             InitializeComponent();
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            login frmdn = new login();
-            frmdn.Show();
-            this.Hide();
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            
         }
     }
 }

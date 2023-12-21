@@ -45,8 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\nhanVien.cs" />
+    <Compile Include="BUS\sach.cs" />
     <Compile Include="BUS\user.cs" />
     <Compile Include="connect\CNT.cs" />
+    <Compile Include="DTO\nhanVienDTO.cs" />
     <Compile Include="DTO\userDTO.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -105,6 +107,9 @@
     <EmbeddedResource Include="Quản Lý Nhân Viên.resx">
       <DependentUpon>Quản Lý Nhân Viên.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Quản Lý Sách.resx">
+      <DependentUpon>Quản Lý Sách.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Trang Chủ.resx">
       <DependentUpon>Trang Chủ.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\png-clipart-arrow-drawing-symbol-circle-arrow-angle-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-book-sach-nen-cam.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

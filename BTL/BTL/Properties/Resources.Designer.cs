@@ -73,6 +73,16 @@ namespace BTL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_book_sach_nen_cam {
+            get {
+                object obj = ResourceManager.GetObject("background-book-sach-nen-cam", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap none_avatar {
             get {
                 object obj = ResourceManager.GetObject("none-avatar", resourceCulture);

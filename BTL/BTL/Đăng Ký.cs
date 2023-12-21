@@ -56,8 +56,6 @@ namespace BTL
         private void button1_Click(object sender, EventArgs e)
         {
             user ub = new user();
-
-
             try
             {
                 if (textBox2.Text == textBox3.Text)

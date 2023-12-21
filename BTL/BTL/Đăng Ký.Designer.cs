@@ -110,7 +110,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Gmail";
+            this.label3.Text = "gmail";
             // 
             // linkLabel1
             // 
@@ -163,7 +163,6 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(405, 239);
             this.textBox4.Name = "textBox4";
-           
             this.textBox4.Size = new System.Drawing.Size(207, 20);
             this.textBox4.TabIndex = 16;
             // 
