@@ -28,7 +28,7 @@ namespace BTL
         {
             Quản_Lý_Nhân_Viên frmdn = new Quản_Lý_Nhân_Viên();
             frmdn.Show();
-            this.Hide()
+            this.Hide();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
